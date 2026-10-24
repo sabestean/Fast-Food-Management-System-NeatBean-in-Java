@@ -1,0 +1,85 @@
+  private void print_btnActionPerformed(java.awt.event.ActionEvent evt) {                                          
+       
+        MessageFormat header = new MessageFormat("Bill"); 
+       
+        try{
+        cart_tbl3.print(JTable.PrintMode.NORMAL,header,null);
+        
+
+        }catch(Exception e){
+        JOptionPane.showMessageDialog(rootPane, e);
+        }
+        
+    }                                         
+
+
+
+
+
+
+
+
+   private void print_btnActionPerformed(java.awt.event.ActionEvent evt) {                                          
+       
+            try {
+        // Create a MessageFormat for the header including the total amount
+        double totalPrice = Double.parseDouble(total_text.getText());
+        MessageFormat header = new MessageFormat("Bill - Total: " + totalPrice);
+        
+        // Print the table along with the header
+        cart_tbl3.print(JTable.PrintMode.NORMAL, header, null);
+        
+    } catch (Exception e) {
+        JOptionPane.showMessageDialog(rootPane, e);
+    }
+        
+    }  
+
+
+
+
+
+
+
+
+
+
+  private void print_btnActionPerformed(java.awt.event.ActionEvent evt) {                                          
+       
+      try {
+        // Get current date and time
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String dateTime = dateFormat.format(new Date());
+        
+        // Create a MessageFormat for the header including the total amount and date/time
+        double totalPrice = Double.parseDouble(total_text.getText());
+        MessageFormat header = new MessageFormat("Bill - Total: " + totalPrice + " - Date/Time: " + dateTime);
+        
+        // Print the table along with the header
+        cart_tbl3.print(JTable.PrintMode.NORMAL, header, null);
+        
+    } catch (Exception e) {
+        JOptionPane.showMessageDialog(rootPane, e);
+    }
+        
+    }                           
+
+
+
+    private void print_btnActionPerformed(java.awt.event.ActionEvent evt) {                                          
+       
+      try {
+        // Get current date and time
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String dateTime = dateFormat.format(new Date());
+        
+        // Create a MessageFormat for the header including the total amount and date/time
+        double totalPrice = Double.parseDouble(total_text.getText());
+        MessageFormat header = new MessageFormat("Bill - Total: " + totalPrice + " - Date/Time: " + dateTime);
+        
+        // Print the table along with the header
+        cart_tbl3.print(JTable.PrintMode.NORMAL, header, null);
+        
+    } catch (Exception e) {
+        JOptionPane.showMessageDialog(rootPane, e);
+    }              
